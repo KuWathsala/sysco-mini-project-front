@@ -15,8 +15,9 @@ export const categoriesReducer = (state=initialState, action) => {
 
         case SET_GET_CATEGORIES_REQUESTED:
             console.log("SET_GET_CATEGORIES_REQUESTED")
-            const {user} = action;
-            return {...state};
+            console.log(action.data)
+            const {categories} = action.data;
+            return {...state, categories};
             
         default:
             return state;
