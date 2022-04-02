@@ -1,0 +1,102 @@
+.product-container {
+    border-width: 5px;
+    /* border-color: black; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    /* background-color: DodgerBlue; */
+    justify-content: start;
+}
+  
+.product-container > div {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    /* background-color: green; */
+    width: 230px;
+    height: 320px;
+    margin: 30px;
+}
+
+.product-container > div:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.product-container .card-ul {
+    list-style-type: none;
+    /* background-color: aquamarine; */
+}
+
+.product-container .img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-ul .name {
+    font-size: large;
+}
+
+.card-ul .price {
+    font-weight: bold;
+}
+
+.card-ul .qty {
+    
+}
+
+.details-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 180px;
+    margin-left: 40px;
+    justify-content: flex-start;
+}
+
+.details-container .img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.details-container .card-div {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    list-style-type: none;
+    margin: 40px;
+    flex-direction: column;
+}
+
+.details-container .card-div * {
+    display: block;
+    margin: 8px 0;
+}
+
+.details-container .name {
+    font-size: xx-large;
+}
+
+.details-container .price {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+
+.details-container .add-to-cart {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 60px;
+}
+
+.details-container .add-to-cart .cart-button {
+    align-self: center;
+    height: 70px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    color: #4CAF50;
+    border: 2px solid #4CAF50; /* Green */
+}
