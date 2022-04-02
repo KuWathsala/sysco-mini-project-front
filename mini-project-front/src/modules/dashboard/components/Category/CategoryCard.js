@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import {useNavigate} from 'react-router-dom';
 
 const CategoryCard = (props) => {
     return(
-        <div key={props.name} className="flex-container">
-            <div className="card">
-                <img src={props.imgURL} className="img"/>
-                <button className="button select">{props.name}</button>
-            </div>
+        <div>
+            <img src={props.imgURL} className="img"/>
+            <label className="name" >{props.name}</label>
         </div>
     );
 }

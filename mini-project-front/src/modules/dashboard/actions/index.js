@@ -1,4 +1,6 @@
 export{
     requestGetCategories,
-    requestSetCategories
+    requestSetCategories,
+    requestSearchProductsByName,
+    setSearchProductsByName
 }from './actions'

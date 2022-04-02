@@ -1,9 +1,7 @@
 import axios from 'axios';
+import {apiBaseURL} from '../../../constants';
 
 export const requestGetCategories = () => {
     console.log("request Get Categories !")
-    return axios.request({ 
-        method: 'get',
-        url: 'https://jsonplaceholder.typicode.com/todos'
-    })
+    return axios.get(`${apiBaseURL}/categories`)
 }

@@ -1,3 +1,2 @@
-export {
-    categoriesReducer
-} from './reducer';
+export { categoriesReducer} from './categoriesReducer';
+export { productsReducer} from './productsReducer';

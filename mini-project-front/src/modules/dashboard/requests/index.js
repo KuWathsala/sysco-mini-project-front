@@ -1,3 +1,2 @@
-export{
-    requestGetCategories
-}from './categoriesReuest'
+export{ requestGetCategories}from './categoriesReuest'
+export{ requestSearchProductsByName}from './productsRequest'

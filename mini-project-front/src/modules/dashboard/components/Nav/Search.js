@@ -1,29 +1,44 @@
 import React, {useState} from 'react';
 import {FaSearch} from 'react-icons/fa';
+import {useDispatch, useSelector, connect} from 'react-redux';  
+import {requestSearchProductsByName} from '../../actions';
+import {useNavigate} from 'react-router-dom';
 
-const Search = () => {
+const Search = (props) => {
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [searchName, setSearchName]= useState('');
 
-    const handleSubmit=(e)=>{
-        setSearchName(e.target.value);
+    const handleSubmit=()=>{
+        dispatch(requestSearchProductsByName(searchName))
+        navigate(`/products/search/${searchName}`);
     }
 
     return(
         <div className="search-container">
             <input
                 value={searchName}
-                onChange={handleSubmit}
+                onChange={(e)=>{setSearchName(e.target.value)}}
                 type="text"
                 id="header-search"
                 placeholder="Search for Foods"
             />
 
-            <button onClick={handleSubmit} className=" search-container button" >
+            <button onClick={handleSubmit} className="search-container button" >
                 <FaSearch/>
             </button>
         </div>
     );   
 
 }
-export default Search;
+
+const mapStateToProps = (state) => {
+    console.log("state in search: ", state)
+    return { 
+        products: state.products,
+    }
+}
+
+export default connect(mapStateToProps, {})(Search);
