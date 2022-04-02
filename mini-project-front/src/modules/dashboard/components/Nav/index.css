@@ -1,0 +1,136 @@
+.nav {
+    display: flex;
+    flex-direction: row;  
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    top: 0px;
+    justify-content: flex-end;
+    /* space-around */
+    background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
+}
+
+.nav .search-container {
+    float: right;
+    margin:12px;
+    background-color:azure;
+    display: flex;
+    justify-content: center;
+}
+
+.nav .search-container input[type=text] {
+    padding: 5px;
+    /* background-color: aqua; */
+    /* visibility: hidden; */
+    font-size: 24px;
+    border: none;
+}
+
+.nav .search-container input[type=text]:focus{
+    outline: none;
+}
+
+.nav .search-container button {
+    padding: 5px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.nav .search-container button:hover {
+background-color: aliceblue;
+}
+
+.list {
+    /* background-color: aquamarine; */
+    list-style-type: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .items {
+    margin-right: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.listdown {
+    display: none;
+    position: absolute;
+    top: 12.5px;
+    right: 7.5px;
+    padding: 5px;
+    height: 45px;
+    width: 45px;
+    color: #f1f1f1;
+}
+
+.logo {
+    margin: 12px;
+}
+
+.profile {
+    margin: 7.5px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;  
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    margin: 80px 0px 0px 40px;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: large;
+    background-color: antiquewhite ;
+}
+ 
+@media screen and (max-width: 700px){
+
+    .nav {
+        justify-content: flex-start;
+    }
+
+    .list {
+        margin: 0px;
+        padding: 0px;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        margin-right: 0px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .items:nth-child(1){
+        border-top: 1px solid rgba(255, 255, 255, 0.555);
+        margin-top: 80px;
+        width: 100%;
+    }
+    
+    .items {
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.555);
+        text-align: center;
+        margin-right: 0px;
+        padding: 20px;
+        background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
+    }
+
+    .listdown {
+        display: block;
+    }  
+
+    .logo {
+        width: 100px;
+    }
+
+    .profile {
+        width: 30px;
+    }
+}
