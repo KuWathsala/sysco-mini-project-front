@@ -1,0 +1,26 @@
+.container {
+    margin-top: 80px;
+    /* width: 300px; */
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    /* background: aqua; */
+}
+
+.container .cart-list {
+    margin-left: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.container .cart-list .name {
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+}

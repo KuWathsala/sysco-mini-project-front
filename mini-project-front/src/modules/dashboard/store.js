@@ -1,11 +1,12 @@
 import {combineReducers, createStore, applyMiddleware} from 'redux';
-import { categoriesReducer, productsReducer } from './reducers';
+import { categoriesReducer, productsReducer,userReducer } from './reducers';
 import createSagaMiddleware from 'redux-saga'
 import {watcherSaga} from './rootSaga'
 
 const rootReducer = combineReducers({
     categories: categoriesReducer,
-    products: productsReducer
+    products: productsReducer,
+    user: userReducer
 })
 // Note: passing middleware as the last argument to createStore requires redux@>=3.1.0
 const sagaMiddleware = createSagaMiddleware()

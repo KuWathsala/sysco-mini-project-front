@@ -2,5 +2,8 @@ export{
     requestGetCategories,
     requestSetCategories,
     requestSearchProductsByName,
-    setSearchProductsByName
+    setSearchProductsByName,
+    requestGetUerDetails,
+    requestSetUerDetails,
+    changeCartId
 }from './actions'
